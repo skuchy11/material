@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a page.
+ 
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ *
+ * @ingroup themeable
+ */
+#}
+<article{{ attributes }}>
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+	 <p>Weather Details of {{ test_var['city name'] }}  City is: </p> 
+	 <p>------------------------Temperature = {{ test_var['temp'] }} </p>
+	 <p>------------------------Humidity = {{test_var['humidity'] }} </p>
+	 <p>-----------------------Wind Speed = {{test_var['wind speed'] }} KM </p>
+	 <p>-----------------------Clouds = {{test_var['clouds'] }} % </p>
+  
+
+  {% if display_submitted %}
+    <footer>
+      {{ author_picture }}
+      <div{{ author_attributes }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+  <div{{ content_attributes }}>
+  
+    {{ content }}
+  </div>
+
+</article>

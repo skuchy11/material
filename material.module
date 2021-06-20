@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Weather Material Page.
+ */
+
+/**
+ * 
+ * Output weather report in nice format.
+ *
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function material_theme() {
+  
+  return [
+    'description' => [
+     'variables' => ['test_var' =>NULL],
+    ],
+  ];
+}
+
+/**
+ * End of "Material Theme.
+ */
