@@ -1,0 +1,5 @@
+material.page:
+  title: Weather Report Page
+  parent: main
+  menu_name: main
+  route_name: material.page

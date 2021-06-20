@@ -1,0 +1,7 @@
+name: Material
+type: module
+description: Demonstrates how to use api to display weather in a drupal page.
+package: Material modules
+core: 8.x
+dependencies:
+  - drupal:node

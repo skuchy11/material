@@ -1,0 +1,7 @@
+material.page:
+  path: '/material/weather-report'
+  defaults:
+    _title: 'Weather Report Page'
+    _controller: '\Drupal\material\Controller\WeatherPage::getContent'
+  requirements:
+    _permission: 'access content'
